@@ -1,15 +1,16 @@
+def process_coins():
+    print("Please insert coins.")
+    dollars = int(input("How many $1 coins?: "))
+    half_dollars = int(input("How many 50c coins?: "))
+    quarters = int(input("How many 25c coins?: "))
+    nickels = int(input("How many 5c coins?: "))
+    total = dollars * 1 + half_dollars * 0.5 + quarters * 0.25 + nickels * 0.05
+    return total
+
+
 class Cashier:
     def __init__(self):
         self.profit = 0
-
-    def process_coins(self):
-        print("Please insert coins.")
-        dollars = int(input("How many $1 coins?: "))
-        half_dollars = int(input("How many 50c coins?: "))
-        quarters = int(input("How many 25c coins?: "))
-        nickels = int(input("How many 5c coins?: "))
-        total = dollars * 1 + half_dollars * 0.5 + quarters * 0.25 + nickels * 0.05
-        return total
 
     def transaction_result(self, coins, cost):
         if coins < cost:
